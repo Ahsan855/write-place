@@ -1,7 +1,11 @@
-import { Inter } from "next/font/google";
+import { Radley } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import RightSidebar from "./components/RightSidebar";
+import LeftSidebar from "./components/LeftSidebar";
 
-const inter = Inter({ subsets: ["latin"] });
+const radley = Radley({ subsets: ["latin"], weight: "400" });
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +15,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={radley.className}>
+        <Navbar />
+        <LeftSidebar />
+        {children}
+        <RightSidebar />
+        <Footer />
+      </body>
     </html>
   );
 }
