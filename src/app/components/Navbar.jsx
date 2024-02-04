@@ -16,12 +16,16 @@ export default function Navbar() {
         <FaPinterestP className="text-2xl" />
         <TfiInstagram className="text-2xl" />
       </div>
-      <h1 className="text-white text-2xl md:text-4xl ">W R I T E P R E S S</h1>
-      <div className="flex flex-col  md:flex-row items-center">
+      <h1 className="text-white text-2xl md:text-4xl hidden lg:block">
+        W R I T E P R E S S
+      </h1>
+      <h2 className="text-6xl text-white font-bold lg:hidden block">W</h2>
+
+      <div className="flex flex-col text-white  md:flex-row items-center">
         <ul
           className="flex 
               items-center
-          text-white font-medium text-base md:text-[1rem] uppercase gap-x-4 md:gap-x-8 "
+          text-white font-medium text-base md:text-[1rem] z-[100] uppercase gap-x-4 md:gap-x-8 mr-5"
         >
           <li>
             <Link href="/">Home</Link>
@@ -35,8 +39,8 @@ export default function Navbar() {
           <li>
             <FaSearch className="text-2xl" />
           </li>
-          <Contentshow />
         </ul>
+        <Contentshow />
       </div>
     </div>
   );
